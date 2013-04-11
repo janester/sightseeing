@@ -3,6 +3,8 @@ class LocationsController < ApplicationController
     if params[:search].present?
       @locations = Location.near(params[:search], 2, :order => :distance)
     else
+      result = request.location
+      Ip_location.create(lat:result.latitude, long:result.longitude)
       @locations = Location.all
     end
   end
