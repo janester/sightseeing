@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(:version => 20130411023510) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "locataions", :force => true do |t|
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "locations", :force => true do |t|
     t.string   "address"
     t.float    "latitude"
